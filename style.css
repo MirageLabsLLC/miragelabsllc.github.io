@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+
+    background: linear-gradient(
+        270deg,
+        #ff5fd8,
+        #6a5cff,
+        #4fdcff,
+        #ff5fd8
+    );
+    background-size: 600% 600%;
+    animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 64px;
+}
+
+/* BRAND */
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    width: 72px;
+    height: auto;
+}
+
+.brand-text {
+    margin-top: 6px;
+    font-family: "Londrina Solid", cursive;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+
+    padding: 10px 20px;
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.content {
+    flex: 1;
+}
+
+.footer {
+    padding: 28px 40px;
+    text-align: center;
+
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(14px);
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.footer-text {
+    font-size: 14px;
+    opacity: 0.85;
+}
